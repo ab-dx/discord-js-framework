@@ -1,10 +1,12 @@
 const Discord = require('discord.js');
+const getColor = require('./colors');
+
 
 module.exports = {
 
   embed(title, text, user = 'a user', imageUrl = ''){
     return {
-      color: '#81a1c1',
+      color: getColor.getColor(),
       title,
       description: text,
       footer: {

@@ -1,10 +1,10 @@
-const Discord = require('discord.js');
+const getColor = require('./colors');
 
 module.exports = {
 
   embed(text){
     return {
-      color: '#81a1c1',
+      color: getColor.getColor(),
       description: text
     };
   }
