@@ -4,6 +4,18 @@
 
  A simple discord.js boiler-plate to help bot developers code faster.
 
+## Installation
+
+* Clone the repo:
+```
+git clone https://github.com/ParallaxWave/discord-js-framework
+```
+* Using degit:
+```
+npx degit https://github.com/ParallaxWave/discord-js-framework
+```
+After cloning, run `npm install` or `yarn install`
+
 ## Code Samples
 
  Edit ``config.json`` as per your needs
@@ -65,14 +77,3 @@ message.channel.send({ embed: embed('Title', 'Description') });
  Run `npm start` to run the bot.
 
 
-## Installation
-
-* Clone the repo:
-```
-git clone https://github.com/ParallaxWave/discord-js-framework
-```
-* Using degit:
-```
-npx degit https://github.com/ParallaxWave/discord-js-framework
-```
- 
