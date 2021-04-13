@@ -60,6 +60,11 @@ message.channel.send({ embed: embed('Title') });
 message.channel.send({ embed: embed('Title', 'Description') });
 ```
 
+## Running the bot
+
+ Run `npm start` to run the bot.
+
+
 ## Installation
 
 * Clone the repo:
