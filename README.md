@@ -2,11 +2,11 @@
 
 ## Introduction
 
-> A simple discord.js boiler-plate to help bot developers code faster.
+ A simple discord.js boiler-plate to help bot developers code faster.
 
 ## Code Samples
 
-> Create a new file in the commands folder:
+ Create a new file in the commands folder:
 ```js
 //yourCommand.js
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
 };
 ```
 
-> Using the embed system:
+ Using the embed system:
 ```js
 //yourCommand.js
 const { embed } = require('../templates/completeEmbed'); 
@@ -53,7 +53,7 @@ message.channel.send({ embed: embed('Title', 'Description') });
 
 ## Installation
 
-> * Clone the repo:
+* Clone the repo:
 ```
 git clone https://github.com/ParallaxWave/discord-js-framework
 ```
