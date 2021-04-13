@@ -1,11 +1,11 @@
-const completeEmbed = require('../templates/completeEmbed').embed;
+const { embed } = require('../templates/completeEmbed');
 
 module.exports = {
   
   name: 'test',
   description: 'Testing the bot',
   execute(message, args){
-    message.channel.send({ embed: completeEmbed('Testing', '**Test Successful**', message.author) });
+    message.channel.send({ embed: embed('Testing', '**Test Successful**', message.author) });
   }
 
 };

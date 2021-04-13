@@ -1,6 +1,6 @@
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-const completeEmbed = require('../templates/completeEmbed').embed;
+const { embed } = require('../templates/completeEmbed');
 
 module.exports = {
 
@@ -13,7 +13,7 @@ module.exports = {
       desc += `**\`${command.name}\`** - ${command.description}\n`;
 
     }
-    message.channel.send({ embed: completeEmbed('Help Menu', desc, message.author) });
+    message.channel.send({ embed: embed('Help Menu', desc, message.author) });
   }
 
 };
