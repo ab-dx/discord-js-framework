@@ -13,6 +13,7 @@ const setStatus = () => {
 };
 
 client.once('ready', () => {
+  console.log('Bot logged in!');
   setInterval(setStatus, 3000);
 });
 
