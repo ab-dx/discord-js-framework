@@ -6,6 +6,15 @@
 
 ## Code Samples
 
+ Edit ``config.json`` as per your needs
+
+ ```json
+{
+  "prefix": "+",
+  "token": "your token"
+}
+ ```
+
  Create a new file in the commands folder:
 ```js
 //yourCommand.js
