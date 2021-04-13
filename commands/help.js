@@ -27,7 +27,7 @@ module.exports = {
       desc += `**${c}**\n`;
       cmds.forEach(cmd => {
         if(cmd.category == c){
-          desc += `\`${cmd.name}\` - ${cmd.desc} \n`;
+          desc += `**\`${cmd.name}\`** - ${cmd.desc} \n`;
         }
       });
       desc += '\n';
