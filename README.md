@@ -72,6 +72,20 @@ message.channel.send({ embed: embed('Title') });
 message.channel.send({ embed: embed('Title', 'Description') });
 ```
 
+Adding aliases to ``templates/alias.js``
+
+```js
+//edit templates/alias.js
+module.exports = {
+  alias: [
+    { index: ['h', 'help'], command: "help" },
+    { index: ['t', 'test'], command: "test" },
+    { index: ['m', 'meme'], command: "meme" }
+  ]
+};
+
+```
+
 ## Running the bot
 
  Run `npm start` to run the bot.
