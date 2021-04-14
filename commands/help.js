@@ -54,7 +54,7 @@ module.exports = {
       }
       categories.forEach(c => {
         if(c.toLowerCase() == args[0].toLowerCase()){
-          desc += `**${c}**\n`;
+          desc += `**${c}**\n\n`;
           cmds.forEach(cmd => {
             if(cmd.category == c){
               desc += `**\`${cmd.name}\`** - ${cmd.desc} \n`;
