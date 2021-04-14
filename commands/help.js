@@ -61,6 +61,8 @@ module.exports = {
             }
           });
           desc += '\n';
+          desc += 'Run `'+prefix+'help <command>` for more help on a command';
+
         }
         else{
            for(const a of alias){
