@@ -2,7 +2,6 @@ const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 //const folders = fs.readdirSync('./commands', { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
 const { embed } = require('../templates/completeEmbed');
-const { alias } = require('../templates/alias.js');
 const { prefix } = require('../config.json');
 module.exports = {
 
@@ -10,6 +9,7 @@ module.exports = {
   description: 'Display the help menu',
   category: 'Misc',
   execute(message, args){
+    let done = false
     function helpList(){
       let desc = "";
       let cmds = [];
@@ -65,19 +65,13 @@ module.exports = {
 
         }
         else{
-           for(const a of alias){
-              let aliases;
-                if(a.index.includes(args[0].toLowerCase())){
-                  aliases = a.index;
                   cmds.forEach(c => {
-                    if(aliases.includes(c.name.toLowerCase())){
-                      desc += "Command : **`"+prefix+args[0]+"`**\n";        
+                    if(args[0].toLowerCase() == c.name.toLowerCase() && !done){
+                      desc += "Command : **`"+prefix+c.name+"`**\n";        
                       desc += "Description: **`"+c.desc+"`**\n";        
-                      desc += "Aliases: **`"+aliases.join(', ')+"`**\n";        
+                      done = true;
                     }
                   });
-                }
-            }
         }
       });
       message.channel.send({ embed: embed('Help Menu', desc, message.author) });
@@ -97,9 +91,9 @@ module.exports = {
         }
       }
       categories.forEach(c => {
-        desc += `**\`${c}\`**\n\n`;
+        desc += `**\`${c}\`**\n`;
       });
-      desc += 'Run `'+prefix+'help <category>` for more help on a category';
+      desc += '\nRun `'+prefix+'help <category>` for more help on a category';
       message.channel.send({ embed: embed('Help Menu', desc, message.author) });
     }
 
