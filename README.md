@@ -86,6 +86,23 @@ module.exports = {
 
 ```
 
+Adding dynamic status to ``templates/status.js``
+
+```js
+//edit templates/status.js
+module.exports = {
+    status( prefix, client ){
+        return [
+      { activity: { name: `${prefix}help`, type: "PLAYING" }, status: 'online' },
+      { activity: { name: `${prefix}help`, type: "LISTENING" }, status: 'online' },
+      { activity: { name: `${client.guilds.cache.size} servers`, type: "WATCHING" }, status: 'online' },
+      { activity: { name: `Your Text Here`, type: "WATCHING" }, status: 'online' }
+    ]
+  }
+};
+
+```
+
 ## Running the bot
 
  Run `npm start` to run the bot.
