@@ -4,15 +4,19 @@ const getColor = require('./colors');
 
 module.exports = {
 
-  embed(title, text, user = 'a user', imageUrl = ''){
+  embed(title, text, user = 'a user', imageUrl = '', footer = ''){
     return {
       color: getColor.getColor(),
       title,
       description: text,
-      footer: {
-        text: `Requested by ${user.username} #${user.discriminator}`,
+      author: {
+        name: `Requested by ${user.username} #${user.discriminator}`,
         icon_url: user.avatarURL({ dynamic: true })
       },
+      footer: {
+        text: footer
+      },
+      timestamp: new Date(),
       image: {
         url: imageUrl
       }
